@@ -20,6 +20,7 @@ function createBoxes(amount) {
     size += 10;
   }
 }
+console.log(boxes);
 
 function destroyBoxes() {
   boxes.remove();
@@ -27,9 +28,8 @@ function destroyBoxes() {
   
 create.addEventListener("click", () => {
   const amount = parseInt(numOfBoxes.value);
-  if (amount) {
     createBoxes(amount);
-  }
+  
 });
 
 destroy.addEventListener("click", () => {
