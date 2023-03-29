@@ -23,7 +23,7 @@ function createBoxes(amount) {
 console.log(boxes);
 
 function destroyBoxes() {
-  boxes.remove();
+  boxes.innerHTML = "";
 }
   
 create.addEventListener("click", () => {
