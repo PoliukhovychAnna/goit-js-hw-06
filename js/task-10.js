@@ -12,15 +12,11 @@ function getRandomHexColor() {
 function createBoxes(amount) {
   let size = 30;
   for (let i = 0; i < amount; i += 1) {
-    const box = document.createElement("div");
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    boxes.append(box);
+    const box = `<div style = "background-color: ${getRandomHexColor()}; width: ${size}px; height:${size}px" ></div>`;
+    boxes.insertAdjacentHTML("beforeend", box);
     size += 10;
   }
 }
-console.log(boxes);
 
 function destroyBoxes() {
   boxes.innerHTML = "";
@@ -29,9 +25,9 @@ function destroyBoxes() {
 create.addEventListener("click", () => {
   const amount = parseInt(numOfBoxes.value);
     createBoxes(amount);
-  
 });
 
 destroy.addEventListener("click", () => {
   destroyBoxes();
 });
+

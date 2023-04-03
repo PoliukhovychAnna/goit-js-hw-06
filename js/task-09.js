@@ -6,10 +6,9 @@ button.addEventListener(
   "click",
   () => {
     colorName.textContent = getRandomHexColor(),
-      bodyEl.style.backgroundColor = getRandomHexColor()
+      bodyEl.style.backgroundColor = colorName.textContent
   },
 )
-
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
